@@ -5,13 +5,15 @@ const main__chat__window = document.getElementById("main__chat__window");
 const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
 myVideo.muted = true;
-
 const peer = new Peer(undefined, {
   host: 'video-chat-0mvp.onrender.com',
-  port: 443,
-  path: '/',
+  path: '/peerjs',
   secure: true,
+  config: {
+    iceServers: [{ urls: 'stun:stun.l.google.com:19302' }]
+  }
 });
+
 
 let myVideoStream;
 
