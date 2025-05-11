@@ -6,10 +6,11 @@ const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
 myVideo.muted = true;
 
-var peer = new Peer(undefined, {
-  path: "/peerjs",
-  host: "/",
-  port: "3030",
+const peer = new Peer(undefined, {
+  host: 'https://video-chat-0mvp.onrender.com',
+  port: 443,
+  path: '/',
+  secure: true,
 });
 
 let myVideoStream;
