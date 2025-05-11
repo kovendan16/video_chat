@@ -6,8 +6,10 @@ const io = require("socket.io")(server);
 // Peer
 
 const { ExpressPeerServer } = require("peer");
+// Set up PeerJS server
 const peerServer = ExpressPeerServer(server, {
   debug: true,
+  path: '/'
 });
 
 app.set("view engine", "ejs");
