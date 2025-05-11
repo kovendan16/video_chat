@@ -7,7 +7,7 @@ const myVideo = document.createElement("video");
 myVideo.muted = true;
 
 const peer = new Peer(undefined, {
-  host: 'https://video-chat-0mvp.onrender.com',
+  host: 'video-chat-0mvp.onrender.com',
   port: 443,
   path: '/',
   secure: true,
